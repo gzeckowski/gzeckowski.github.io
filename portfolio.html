@@ -1,0 +1,277 @@
+<!DOCTYPE html> <!-- Declare the document type -->
+<html lang="en"> <!-- Start of the HTML document with language -->
+	
+    <head> <!-- Start of the document header -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- materalize and jQuery -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <title>Portfolio</title> <!-- Sets the title of the page -->
+
+    <!--Make image responsive -->
+    <!--Restore Bullets-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+    
+        /* Background image layer */
+        .background-overlay {
+            background: url('images/stream_maryland.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* control lightness */
+            z-index: -1;
+        }
+        .brand-logo {
+            font-size: 1.7rem !important;
+            white-space: nowrap;
+        }
+
+        /* Accordion Portfolio layer */
+        .accordion-body {
+            display: none;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-left: 3px solid #4caf50;
+        }
+        .accordion-header {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: #e0f2f1;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: #4d926b;
+        }
+        .framed {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 8px;
+            background-color: white;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px; 
+        }
+    </style>
+
+    </head> <!-- End of the document header -->
+	
+    <body> <!-- Start of the document body -->
+    <div class="background-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="green darken-2">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">GIS Analyst & Environmental Scientist</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume/Resume_Updated_6_10.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/gwendolyn-zeckowski-62904226b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/gzeckowski" target="_blank" rel="noopener noreferrer">Github</a></li>
+                <li><a href="mailto:gzeckowski@gmail.com">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Mobile nav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume/Resume_Updated_6_10.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/gwendolyn-zeckowski-62904226b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/gzeckowski" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li><a href="mailto:gzeckowski@gmail.com">Contact</a></li>
+    </ul>
+
+        <ul class="collapsible">
+
+            <!-- Job Experience -->
+            <li>
+            <div class="collapsible-header"><h5>Job Experience</h5></div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+
+                <li>
+                    <div class="collapsible-header">Clean Streams LLC - Field Maps</div>
+                    <div class="collapsible-body">
+                    <div class="center-align">
+                    <img src="portfolio/job/clean_streams_example_Page_1.jpg" style="max-width: 500px;">
+                    </div>
+                    <div class="framed">
+                    <p>This is one page from a field packet I created at Clean Streams LLC 
+                    on a contract for Maryland DNR's Maryland Biological Stream Survey.
+                    This work was done from August of 2024 through May of 2025.</p>
+                    </div>
+                </li>
+
+                </ul>
+            </div>
+            </li>
+
+            <!-- Master's Portfolio -->
+            <li>
+            <div class="collapsible-header"><h5>Master's Projects</h5></div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+
+                <li>
+                    <div class="collapsible-header">M.S. GIS Capstone Course - Smart Streams: Machine Learning for Healthier Streams in Prince George's County</div>
+                    <div class="collapsible-body">
+                        <iframe src="portfolio/graduate/capstone.pdf" width="100%" height="700px" style="border: none;"></iframe>
+                        <div class="framed">
+                        <a href="https://storymaps.arcgis.com/stories/3397aff4ffdc4e658f520117e8f3ba0d/">Click here - Esri StoryMap</a>
+                    <p>This is my final project for my capstone course, Smart Streams: Machine Learning for Healthier Streams in Prince George's County.
+                        Within this document, I found the Regression Models, Ordinary Least Squares, Geographic
+                        Weighted Regression, Forest-based and Boosted Classification and Regression a Machine
+                        Learning Tool for Prince George's County Maryland Biological Stream Survey Data collected in the years
+                        from 2000 to 2017.
+                    </p>
+                    </div>
+                </li>
+
+
+                                        <!-- Website Project Example
+                                        <div class="accordion">
+                                        <h5 class="accordion-header center-align">Web Mapping App - Interactive Eclipse Viewer</h5>
+                                        <div class="accordion-body">
+                                            <a 
+                                            href="https://your-github-pages-site.com/eclipse-viewer" target="_blank" rel="noopener noreferrer">
+                                            Visit My Web Mapping App
+                                            </a>
+                                            <p>
+                                            This interactive Leaflet.js web app was created for my final project in Web GIS. It allows users to explore solar eclipse paths across the U.S. with dynamic map layers and JavaScript-based sliders.
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    -->
+
+                <li>
+                    <div class="collapsible-header">M.S. GIS Advanced Programming Course - Red Fox Population in Prince George's County in Jupyter Notebook</div>
+                        <div class="collapsible-body">
+                        <iframe src="portfolio/graduate/cinnamon_teal_spatial_modeling.pdf" width="100%" height="700px" style="border: none;"></iframe>
+                        <div class="framed">
+                    <p>This is my final report for the Advanced Programming Course in my Master's GIS Program at UMD. 
+                        I used Jupyter Notebook to gather iNaturalist, Road Centerlines, Population Census Data
+                        County Census Data, and Major Cities in Prince Georges County (PGCo), Maryland on Red Fox Populations.
+                        The report includes all of the data compiled into one map and shows where Red Foxes fall within
+                        the major cities of PGCo to 1.5 kilometers.
+                      </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collapsible-header">M.S. GIS Spatial Modeling Course - Cinnamon Teal Habitat Suitability Analysis</div>
+                        <div class="collapsible-body">
+                        <iframe src="portfolio/graduate/cinnamon_teal_spatial_modeling.pdf" width="100%" height="700px" style="border: none;"></iframe>
+                        <div class="framed">
+                    <p>This is my final report for the Spatial Modeling Course in my Master's GIS Program at UMD. 
+                        I used ArcGIS Pro ModelBuilder to analyze factors affecting the Cinnamon Teal's Range
+                        in a habitat friendly location to a more urban location. 
+                       The report includes workflow diagrams and conclusions based on model validation.
+                      </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collapsible-header">M.S. GIS Digital Image Processing and Analysis Course - Urban and Residential Development of Anne Arundel County and Its 
+                        Effect on the Chesapeake Bay Watershed</div>
+                        <div class="collapsible-body">
+                        <iframe src="portfolio/graduate/aaco_cb_digital_image_analysis.pdf" width="100%" height="700px" style="border: none;"></iframe>
+                        <div class="framed">
+                    <p>This is my final report for the Digital Image Processing and Analysis Course in my Master's GIS Program at UMD. I used Earth Explorer to 
+                        capturie various images of Anne Arundel County from the years 1985 and 2022 to see the urban growth and how inturn it is effecting 
+                        the Chesapeake Bay Watershed. The report includes work processed in ENVI 5.6.2. Software. 
+                      </p>
+                    </div>
+                    </div>
+                </li>
+
+                </ul>
+            </div>
+            </li>
+
+            <!-- Undergraduate Portfolio -->
+            <li>
+                <div class="collapsible-header"><h5>Undergraduate Projects</h5></div>
+                <div class="collapsible-body">
+                <ul class="collapsible">
+                    
+                    <!-- First Project -->
+                    <li>
+                    <div class="collapsible-header">B.S. ENSP Capstone Course - UMD Wildlife Airport Strike StoryMap</div>
+                    <div class="collapsible-body">
+                        <!-- Use a PDF viewer (iframe or object) for .pdf, not <img> -->
+                        <iframe src="portfolio/undergrad/undergrad_capstone_ENSP.pdf" width="100%" height="600px" style="border: none;"></iframe>
+                        <p class="framed">
+                        This is my final report for the Capstone Course in my Bachelor's Environmental Science and Policy Program at UMD. This project looked at USDA APHIS Wildlife Services and Airport Wildlife Hazards Program, telling their story via Esri Dashboard and StoryMap. I only have access to the PowerPoint creation.
+                        </p>
+                    </div>
+                    </li>
+            
+                    <!-- Second Project -->
+                    <li>
+                    <div class="collapsible-header">B.S. ENSP Applied Spatial Analysis - Wood Duck Habitat Suitability</div>
+                    <div class="collapsible-body">
+                        <iframe src="portfolio/undergrad/applied_spatial_analysis_ensp.pdf" width="100%" height="700px" style="border: none;"></iframe>
+                        <div class="framed">
+                        <p>
+                            This is my final report for Applied Spatial Analysis in my Bachelor's Environmental Science and Policy Program at UMD. The project used ArcMap to find suitable habitat for Wood Ducks in Montgomery County based on land use, elevation, and protected land.
+                        </p>
+                        </div>
+                    </div>
+                    </li>
+            
+                </ul>
+                </div>
+            </li>
+  
+
+        <!--Makes the navigation bar accessible-->
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                dispMapsz();
+                $(window).resize(dispMapsz);
+            });
+
+
+            $(document).ready(function(){
+                $(".accordion-header").click(function(){
+                $(this).next(".accordion-body").slideToggle(200);
+                $(this).toggleClass("active");
+                });
+            });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, {
+            accordion: false  // Set to true if you want only one open at a time
+            });
+        });
+    </script>
+
+		
+	</body> <!-- End of the document body -->
+</html> <!-- End of the HTML document -->

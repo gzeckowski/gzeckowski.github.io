@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!-- Declare the document type -->
+<html lang="en"> <!-- Start of the HTML document with language -->
+	
+    <head> <!-- Start of the document header -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- materalize and jQuery -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <title>Homepage_Portfolio</title> <!-- Sets the title of the page -->
+
+    <!--Make image responsive -->
+    <!--Restore Bullets-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+        p {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        /* Background image layer */
+        .background-overlay {
+            background: url('images/stream_maryland.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* control lightness */
+            z-index: -1;
+        }
+        .brand-logo {
+            font-size: 1.7rem !important;
+            white-space: nowrap;
+        }
+        .framed {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 8px;
+            background-color: white;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px; 
+        }
+    </style>
+
+    </head> <!-- End of the document header -->
+	
+    <body> <!-- Start of the document body -->
+    <div class="background-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="green darken-2">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">GIS Analyst & Environmental Scientist</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume/Resume_Updated_6_10.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/gwendolyn-zeckowski-62904226b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/gzeckowski" target="_blank" rel="noopener noreferrer">Github</a></li>
+                <li><a href="mailto:gzeckowski@gmail.com">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Mobile nav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume/Resume_Updated_6_10.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/gwendolyn-zeckowski-62904226b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/gzeckowski" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li><a href="mailto:gzeckowski@gmail.com">Contact</a></li>
+    </ul>
+    
+
+        <!-- Materialize grid -->
+        <div class="col s12 m9 center-align">
+            <h5>I am Gwendolyn Zeckowski, and this is my portfolio for job applications.</h5>
+            <h5>I hope you recieve use from it when I am applying to your job! Hope it is enjoyed! </h5>
+            <hr>
+            <p><i>Click on the navigation bar above to find my Portfolio, Resume, LinkedIn, Github, and Email Contact!</i></p>
+            <hr>
+            <div style="display: flex; flex-wrap: wrap; gap: 0;">
+                <img src="images/IMG_3631.png" alt="Image 1" class="framed" style="width: 20%;">
+                <img src="images/IMG_8282.jpeg" alt="Image 2" class="framed" style="width: 20%;">
+                <img src="images/IMG_5531.png" alt="Image 3" class="framed" style="width: 20%;">
+                <img src="images/IMG_1923.jpeg" alt="Image 4" class="framed" style="width: 20%;">
+                <img src="images/IMG_2014.JPEG" alt="Image 5" class="framed" style="width: 20%;">
+              </div>
+            <hr>
+            <p>I am a recent graduate with an M.S. in Geospatial Information Sciences
+            from the University of Maryland. Before that, I achieved my B.S. in
+            Environmental Science and Policy with a concentration of Wildlife Ecology and Management and
+            a minor in Geographic Information Sciences from the University of Maryland.</p>
+            <p>Since August 2024, I have been conducting surveys in riparian wetlands 
+            for the Maryland Department of Natural Resources. This job used GIS to identify and contact 
+            landowners for the Maryland DNR's Maryland Biological Stream Survey on behalf of Clean Streams LLC.
+            Through that experience, I have also surveyed streams in Prince George's County, MD, for Clean Streams LLC, looking into 
+            Geomorphology and the Maryland Biological Stream Survey. </p>
+            <hr><i>
+            The animals were handled in conjunction with 
+            long-term population monitoring by USGS and FWS. 
+            To ensure respect for wildlife, please leave
+            handling to permitted wildlife professionals.</i>
+            <hr>
+            <p><i>Photos 1, 3 and 5, are from my most recent job, Clean Streams LLC, conducting stream field research.
+            Photo 2 is from the FWS Maine Coastal National Wildlife Refuge Internship. Photo 4 is from Poplar Island with the USGS Patuxent Research Refuge.</i></p>
+            <hr>Copyright &copy; 2025 Gwendolyn Zeckowski
+            <br><br>
+        </div>
+        
+        <!--Makes the navigation bar accessible-->
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                dispMapsz();
+                $(window).resize(dispMapsz);
+            });
+        </script>
+		
+	</body> <!-- End of the document body -->
+</html> <!-- End of the HTML document -->
